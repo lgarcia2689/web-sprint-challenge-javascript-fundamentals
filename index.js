@@ -16,7 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+// internal is able to be to access the variable due to it be nested and it being a child of my function
 
 
 
@@ -28,10 +28,17 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(num) {
+  let x = 0;
+    for(let i = 0; i < num; i++)
+    {
+      x+=i;
+    }
+    return x;
   }
+ console.log(summation(4))
+
+
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,9 +63,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+ function animalNames(array){
+  for(let i = 0; i < array.length ; i++){
+    const newArray = array[i];
+    return `name: ${newArray["animal_name"]}, scientific: ${newArray["scientific_name"]}`;
   }
+}
+console.log(animalNames(zooAnimals));
+
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -101,10 +113,10 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a,b,cb){
+  //   
   }
- 
+  consume(1,2);
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
@@ -143,15 +155,22 @@ function greeting(/*Your Code Here */){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+function CuboidMaker(length,width,height){
+  this.length = 4;
+  this.width = 5;
+  this.height= 5;
 }
+
 
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
 
+var volume = {
+
+  return this.length * this.width * this.height;
+}
 
 
 
